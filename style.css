@@ -1,0 +1,158 @@
+:root{
+  --clr-bg: #282525;
+  --clr-color: #ffffff;
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  line-height: calc(1rem + 0.5em);
+}
+
+@keyframes transitionin {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
+
+body {
+  width: 80%;
+  background-color: var(--clr-bg);
+  color: var(--clr-color);
+  margin: 0 auto;
+  width: 95%;
+  animation: transitionin 0.85s;
+}
+
+a {
+  color: #ffd91a;
+  transition: 0.4s;
+}
+
+a:hover {
+  color: white;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+}
+
+.nounderline:hover {
+  text-decoration: none;
+}
+
+.rightcontent {
+  float: right;
+  width: 15%;
+}
+
+.rightaside {
+  position: fixed;
+  margin-top: 10px;
+  height: 100svh;
+}
+
+.rightaside .fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 12svh;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.rightaside .fill img {
+  flex-shrink: 50;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.navelements {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+
+.btn {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #ffd91a;
+  color: #111111;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.leftaside {
+  font-size: 1.2rem;
+  margin: 0 auto;
+  float: left;
+  width: 90%;
+}
+
+#yellow {
+  color: #ffd91a;
+}
+
+.headings {
+  font-family: "Switzer", "sans-serif";
+}
+
+.nopadding {
+  padding: 15px;
+}
+
+.arrowhead {
+  display: inline-block;
+  text-align: center;
+  height: 25px;
+  width: 25px;
+  transition: 0.3s;
+}
+
+.arrowrotate:hover .arrowhead {
+  transform: rotate(42deg);
+}
+
+/* mobile */
+
+@media (max-width: 480px) {
+  .rightcontent {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    border: 1px solid transparent;
+  }
+
+  .rightaside {
+    position: inherit;
+    border: 1px solid transparent;
+    height: 55svh;
+  }
+
+  .navelements {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .leftaside {
+    font-size: 0.9rem;
+    width: 98%;
+  }
+
+  #yellow {
+    font-size: 1.3rem;
+  }
+}
